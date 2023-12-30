@@ -1,0 +1,9 @@
+<div class="container" style="height: 100vh;">
+  <div>
+    <textarea placeholder="Type a message" type="text" name="textarea" [(ngModel)]="textArea"></textarea>
+    <button (click)="isEmojiPickerVisible = !isEmojiPickerVisible;">😀</button>
+    <emoji-mart class="emoji-mart" *ngIf="isEmojiPickerVisible" (emojiSelect)="addEmoji($event)" title="Choose your emoji"></emoji-mart>
+    <div class="display-text">{{displayHtml | emojify}}</div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
