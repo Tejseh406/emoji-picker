@@ -5,24 +5,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   public textArea: string = '';
-  public isEmojiPickerVisible: boolean= false;
+  public isEmojiPickerVisible: boolean = false;
   public addEmoji(event: { emoji: { native: any; }; }) {
-     this.textArea = `${this.textArea}${event.emoji.native}`;
-     this.isEmojiPickerVisible = false;
+    this.textArea = `${this.textArea}${event.emoji.native}`;
+    this.isEmojiPickerVisible = false;
   }
- 
+
   displayHtml = `
-  Wow, man :open_mouth:! That was kind of illegal :smirk:
+  Wow, man :open_mouth:! That was kind of illegal and real :smirk:
 `;
 
   ngOnInit(): void {
-   
+
   }
 
-  constructor(){
+  constructor() {
 
   }
 
